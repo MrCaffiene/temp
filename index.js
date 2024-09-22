@@ -1,6 +1,7 @@
-const http = require("node:http");
+const http = require("http");
 const server = http.createServer((req, res) => {
     res.writeHead(200, { "Content-Type": "text/plain" });
-    res.end("Home Page");
+    res.end("Deployment is successful");
 });
-server.listen(process.env.PORT || 3000, () => { console.log("server listening on port : 3000") });
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => { console.log("server listening on port : 3000") });
